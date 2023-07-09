@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="250dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/BasicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/rule_bonus_game"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lucmon.keyk.library.library.CustomButton
+            android:id="@+id/playButton"
+            style="@style/BasicText"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:textSize="18sp"
+            android:background="@drawable/bg_game_button"
+            android:text="@string/start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <com.lucmon.keyk.library.library.CustomButton
+            android:id="@+id/declineButton"
+            style="@style/BasicText"
+            android:layout_width="120dp"
+            android:textSize="18sp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_game_button"
+            android:text="@string/decline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

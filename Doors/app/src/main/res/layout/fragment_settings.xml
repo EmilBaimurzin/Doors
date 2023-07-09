@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_landscape">
+
+    <com.lucmon.keyk.library.library.CustomButton
+        android:id="@+id/resetButton"
+        style="@style/MenuButtons"
+        android:text="@string/reset_balance"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton" />
+
+    <com.lucmon.keyk.library.library.CustomButton
+        android:id="@+id/soundButton"
+        style="@style/MenuButtons"
+        android:layout_marginHorizontal="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_line" />
+
+    <com.lucmon.keyk.library.library.CustomButton
+        android:id="@+id/exitGameButton"
+        style="@style/MenuButtons"
+        android:text="@string/exit_game"
+        android:layout_margin="12dp"
+        app:layout_constraintStart_toStartOf="@+id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="500dp"
+        android:layout_height="110dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:src="@drawable/img_logotype"
+        app:layout_constraintBottom_toTopOf="@+id/soundButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        android:id="@+id/vertical_line"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        android:id="@+id/horizontal_line"/>
+
+    <com.lucmon.keyk.library.library.CustomImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_back_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

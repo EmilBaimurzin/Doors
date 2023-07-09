@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_main_gradient">
+
+        <TextView
+            style="@style/BasicText"
+            android:id="@+id/winLoseTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/game_over"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.lucmon.keyk.library.library.CustomButton
+            android:id="@+id/try_againButton"
+            android:layout_width="100dp"
+            style="@style/BasicText"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/bg_game_button"
+            android:text="@string/play_again"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/center"
+            app:layout_constraintTop_toBottomOf="@+id/winLoseTextView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.lucmon.keyk.library.library.CustomButton
+            android:id="@+id/leaveButton"
+            android:layout_width="100dp"
+            style="@style/BasicText"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_game_button"
+            android:text="@string/exit"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/center"
+            app:layout_constraintTop_toTopOf="@+id/try_againButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

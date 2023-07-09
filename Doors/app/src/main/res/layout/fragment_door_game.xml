@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_landscape"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        android:id="@+id/center"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/img_monke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/img_monke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/attemptsText"
+        style="@style/BasicText"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_margin="12dp"
+        android:text="@string/attempts"
+        app:layout_constraintEnd_toStartOf="@+id/coefficientFixedText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:background="@drawable/bg_text_second"
+        android:id="@+id/attemptsContainer"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/attemptsText"
+        app:layout_constraintStart_toStartOf="@+id/attemptsText"
+        app:layout_constraintTop_toBottomOf="@+id/attemptsText" />
+
+    <TextView
+        android:id="@+id/coefficientFixedText"
+        style="@style/BasicText"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:text="@string/win_rate"
+        app:layout_constraintEnd_toStartOf="@+id/center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coefficientTextView"
+        style="@style/BasicText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_text_first"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/coefficientFixedText"
+        app:layout_constraintStart_toStartOf="@+id/coefficientFixedText"
+        app:layout_constraintTop_toBottomOf="@+id/attemptsText" />
+
+    <TextView
+        android:id="@+id/biggestWinFixedView"
+        style="@style/BasicText"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_margin="12dp"
+        android:text="@string/biggest_win"
+        app:layout_constraintStart_toEndOf="@+id/winningsFixedText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bigLayout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_text_first"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/biggestWinFixedView"
+        app:layout_constraintStart_toStartOf="@+id/biggestWinFixedView"
+        app:layout_constraintTop_toBottomOf="@+id/attemptsText">
+
+        <TextView
+            android:id="@+id/biggestWinTextView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:paddingEnd="1dp"
+            tools:text="50000" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinAnim2"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/coin" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/winningsFixedText"
+        style="@style/BasicText"
+        android:layout_width="160dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="6dp"
+        android:text="@string/winnings"
+        app:layout_constraintStart_toStartOf="@+id/center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/winningsLayout"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:background="@drawable/bg_text_first"
+        app:layout_constraintEnd_toEndOf="@+id/winningsFixedText"
+        app:layout_constraintStart_toStartOf="@+id/winningsFixedText"
+        app:layout_constraintTop_toBottomOf="@+id/attemptsText"
+        android:layout_height="40dp">
+
+        <TextView
+            tools:text="50000"
+            android:paddingEnd="1dp"
+            android:layout_marginStart="20dp"
+            android:id="@+id/winningsTextView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinAnim"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/coin" />
+
+    </LinearLayout>
+
+    <com.lucmon.keyk.library.library.CustomButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        style="@style/BasicText"
+        android:textSize="22sp"
+        android:visibility="gone"
+        android:background="@drawable/bg_game_button"
+        android:text="@string/collect"
+        android:id="@+id/collectButton"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/collectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coefficientTextView">
+
+        <LinearLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
